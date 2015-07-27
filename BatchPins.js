@@ -8,7 +8,7 @@ var DEBUG = true;
 // The timeline public URL root
 var API_URL_ROOT = 'https://timeline-api.getpebble.com/';
 
-// Arrays for temporarily storing pins to be inserted and pisn to be deleted
+// Arrays for temporarily storing pins to be inserted and pins to be deleted
 var INSERT_PINS = [], DELETE_PINS = [];
 
 /**
@@ -68,7 +68,7 @@ function insertUserPin(pin) {
  * Add a pin to the DELETE_PINS array, queued for later
  * @param pin The JSON pin to delete.
  */
-function deleteUserPin(pin, callback) {
+function deleteUserPin(pin) {
 	if(DEBUG) console.log("Pin added to Deletion array: " + pin.id);
 	DELETE_PINS.push(pin);
 }
